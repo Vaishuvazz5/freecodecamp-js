@@ -351,28 +351,567 @@ let myPoints = 3
 // Set their values to a random number between 2-11
 // 2. Create a variable, sum, and set it to the sum of the cards
 
-let firstCard = 10
-let secondCard = 7
-let sum = firstCard + secondCard + 6
-if (sum < 21){
-    // console.log("Do you want to draw a new card?😐")
-} else if(sum === 21){
-    // console.log("whohoo!you've got a blackjack!😂")
-} else {
-    // console.log("you're out of the game!😭")
-}
+// let firstCard = 10
+// let secondCard = 4
+// let cards = [firstCard, secondCard]     //array- ordered list of items
+// let sum = firstCard + secondCard 
+// let hasBlackJack = false
+// if (sum < 21){
+//     console.log("Do you want to draw a new card?😐")
+// } else if(sum === 21){
+//     console.log("whohoo!you've got a blackjack!😂")
+// } else {
+//     console.log("you're out of the game!😭")
+// }
 // console.log(sum)
+//another card
+// Write the conditional according to the rules:
+// if less than or equal to 20 -"Do you want to draw new card?😐"
+// else if exactly 21 -"whohoo! you have got blackjack!😂"
+// else - "you are out of the game!😭"
+
+// console.log(hasBlackJack)
+// 1. Create a variable called isAlive and assign it to true
+// let isAlive = true
+// // console.log(isAlive)
+// // 1. Declare a variable called message and assign its value to an empty string
+// let message = ""
+// // 2. Flip its value to false in the appropriate code block
+// if (sum <= 20){
+//     // console.log("Do you want to draw a new card?😐")
+//     // Reassign the message variable to the string we're logging out
+//     message = "Do you want to draw a new card?😐"
+// } else if (sum === 21){
+//     // console.log("whohoo! you have got blackjack!😂")
+//     message = "whohoo! you have got blackjack!😂"
+//     hasBlackJack = true
+// } else{
+//     // console.log("you are out of the game!😭")
+//     message =  "you are out of the game!😭"
+//     isAlive = false
+// }
+// console.log(message)
+
+// console.log(4 === 3)  //false
+// console.log(5 > 2)   //true
+// console.log(12 > 12) //false
+// console.log(3 < 0)  //false
+// console.log(3 >= 3) //true
+// console.log(11 <= 11) //true
+// console.log(3 <= 2) //false
+
+
+
 
 
 
 
 // Check if the person is old enough to enter the nightclub (21)
 // Log a suitable message to the console in both cases
-let age = 20
+// let age = 20
 // if less than 21 "you are not enter the club!"
 // else    "welcome"
-if (age < 21){
-    console.log("you are not enter the club!")
-} else{
-    console.log("welcome")
+// if (age < 21){
+// console.log("you are not enter the club!")
+// } else{
+// console.log("welcome")
+// }
+
+
+
+//  Check if the person is eligible for a birthday card from the king! (100)
+
+// let age = 145
+//   if less than 100 -"Not eligible"
+//   else if exactly 100 - "Here is your birthday card from the king!"
+//   else "Not eligible, you have already gotten one"
+// if (age < 100) {
+//     // console.log("Not eligible")
+// } else if (age === 100) {
+//     // console.log("Here is your birthday card from the king")
+// } else {
+//     // console.log("Not eligible, you have already gotten one")
+// }
+
+
+
+
+//blackjack
+// let messageEL = document.getElementById("message-el")
+// let sumEL = document.getElementById("sum-el")
+// // // let sumEL = document.querySelector("#sum-el")
+// let cardsEL = document.getElementById("cards-el")
+// // // console.log(messageEL)
+
+// // //create a new function called  startGame() that calls renderGame()
+// function startGame(){
+//     renderGame()
+// }
+// function renderGame(){
+// //     //render out firstcard and secondcard
+//     cardsEL.textContent = "cards:" 
+//     for (let i = 0; i < cards.length; i++){
+//         cardsEL.textContent += cards[i] = ""
+//     }
+// //     //render out all th cards we have
+//     sumEL.textContent = "sum:" +sum
+//     if (sum <= 20){
+//         message = "Do you want to draw a new card?😐"
+//     }else if (sum === 21){
+//         message = "whohoo! you have got blackjack!😂"
+//         hasBlackJack = true
+//     } else{
+//         message =  "you are out of the game!😭"
+//         isAlive = false
+//     }
+//     // console.log(message)
+//     messageEL.textContent = message
+// }
+// function newCard(){
+// //     // console.log("Drawing a new card rom the deck!")
+//     let card = 6
+//     sum += card
+//     cards.push(card)
+//     console.log(cards)
+//     renderGame()
+// }
+
+
+
+
+
+
+
+//Arrays - ordered list of items
+// let featuredPost = [
+//     "check out my Netflix clone",  //0
+//     "Here's the code for my projects",  //1
+//     "I've just relaunched my portfolio"  //2
+// ]
+// // console.log(featu+ cards[0] + " " + cards[1]redPost[2])
+
+// let experiance = ["CEO at scrimba","Frontend developer in xeneta","People counter for Norstat" ]
+// console.log(experiance[1])
+// console.log (experiance[0])
+// console.log(featuredPost.length)
+
+
+//array -composite/complex data types-primitive,string,boolean,number
+
+
+// let cards = [7,4]
+// cards.push(6)
+// // console.log(cards)
+// let messages = [
+//     "Hey, how is it going?",
+//     "I'm great,thank you! How about you",
+//     "All good.Been working on my portfolio lately."
+// ]
+// let newMessage = "Same here!"
+// messages.push(newMessage)
+// // console.log(messages)
+// messages.pop()
+// console.log(messages)
+
+
+
+
+//counting in javascript
+
+for (let count = 10; count < 21; count++) {
+    // console.log(count)
 }
+for (let i = 0; i < 6; i += 1) {
+    // console.log(i)
+}
+for (let i = 10; i < 101; i += 10) {
+    // console.log(i)
+}
+
+
+
+let messages = [
+    "Hey, how is it going?",
+    "I'm great,thank you! How about you",
+    "All good.Been working on my portfolio lately.",
+    "Same here!",
+    "Great to hear"
+]
+// console.log(messages[0])
+// console.log(messages[1])
+// console.log(messages[2])
+// console.log(messages[3])
+for (let i = 0; i < 5; i += 1) {
+    // console.log(messages[0])
+}
+
+
+
+
+// let cards = [7,3,9]
+//create a for loop that logs out all the cards in the array
+//use cards.length to specify how long the loop should run
+// for ( let i = 0; i < cards.length; i++){
+//     // console.log(cards[i])
+// }
+
+
+
+// let sentence = ["Hello", "my", "name", "is", "per"]
+// let greetingEL = document.getElementById("greeting-el")
+// //Render the sentence in the greetingEL paragraph using a for loop and .textContent
+// for (let i =0; i < sentence.length; i++){
+//     greetingEL.textContent += sentence[i] + ""
+// }
+
+
+
+
+//returning values in functions
+let player1Time = 102
+let player2Time = 107
+function getFastestRaceTime() {
+    if (player1Time < player2Time) {
+        return player1Time
+    } else if (player2Time < player1Time) {
+        return player2Time
+    } else {
+        return player1Time
+    }
+}
+let fastestRace = getFastestRaceTime()
+// console.log(fastestRace)
+
+
+//write a function that returns the total race time
+//call/invoke the function and store the returned value in anew variable
+//finally, log the variable out
+
+function getTotalRaceTime() {
+    return player1Time + player2Time
+}
+let totalTime = getTotalRaceTime()
+// console.log(totalTime)
+
+
+
+//math.random()
+let randomNumber = Math.floor(Math.random() * 6) + 1
+// console.log(randomNumber)
+
+let flooredNumber = Math.floor(12.999999)
+// console.log(flooredNumber)
+
+
+// Create a function, rollDice(), that returns a random number between 1 and 6
+
+function rollDice() {
+    let randomNumber = Math.floor(Math.random() * 6) + 1
+    return randomNumber
+}
+// console.log(rollDice())
+
+
+
+
+//cards
+// let firstCard = getRandomCard()
+// let secondCard = getRandomCard()
+// let cards = [firstCard , secondCard]
+// let sum = firstCard + secondCard
+// let hasBlackJack = false
+// let isAlive = true
+// let message = ""
+// let messageEL = document.getElementById("message-el")
+// let sumEL = document.getElementById("sum-el")
+// let cardsEL = document.getElementById("cards-el")
+// console.log(cards)
+// function getRandomCard(){
+//     let randomNumber = Math.floor(Math.random() *13) + 1
+//     if (randomNumber > 10){
+//         return 10
+//     } else if (randomNumber === 1){
+//         return 11
+//     } else {
+//         return randomNumber
+//     }
+
+// }
+// function startGame(){
+//     renderGame()
+// }
+// function renderGame(){
+//     cardsEL.textContent = "Cards:"
+//     for (let i =0; i < cards.length; i++){
+//         cardsEL.textContent += cards[i] = ""
+//     }
+//     sumEL.textContent = "sum:" +sum
+//     if (sum <= 20){
+//         message = "Do you want to draw a new card?😐"
+//     }else if (sum === 21){
+//         message = "whohoo! you have got blackjack!😂"
+//         hasBlackJack = true
+//     } else{
+//         message =  "you are out of the game!😭"
+//         isAlive = false
+//     }
+//     // console.log(message)
+//     messageEL.textContent = message
+// }
+// function newCard(){
+//     // console.log("Drawing a new card rom the deck!")
+//         let card = 6
+//         sum += card
+//         cards.push(card)
+//         console.log(cards)
+//         renderGame()
+//     }
+
+
+
+//cards-blackjack
+let cards = []
+let sum = 0
+let hasBlackJack = false
+let isAlive = false
+let message = ""
+// let messageEL = document.getElementById("message-el")
+// let sumEL = document.getElementById("sum-el")
+// let cardsEL = document.getElementById("cards-el")
+
+let player = {
+     name: "Per",
+     chips: 200,
+     sayHello: function(){
+        // console.log("Heisann!")
+     }
+}
+player.sayHello()
+
+// let playerEL = document.getElementById("player-el")
+// playerEL.textContent = player.name + ": $" + player.chips
+// console.log(cards)
+
+function getRandomCard() {
+    let randomNumber = Math.floor(Math.random() * 13) + 1
+    if (randomNumber > 10) {
+        return 10
+    } else if (randomNumber === 1) {
+        return 11
+    } else {
+        return randomNumber
+    }
+}
+function startGame() {
+    isAlive = true
+    let firstCard = getRandomCard()
+    let secondCard = getRandomCard()
+    cards = [firstCard, secondCard]
+    sum = firstCard + secondCard
+    renderGame()
+}
+function renderGame() {
+    cardsEL.textContent = "Cards:"
+    for (let i = 0; i < cards.length; i++) {
+        cardsEL.textContent += cards[i] = ""
+    }
+    sumEL.textContent = "sum:" + sum
+    if (sum <= 20) {
+        message = "Do you want to draw a new card?😐"
+    } else if (sum === 21) {
+        message = "whohoo! you have got blackjack!😂"
+        hasBlackJack = true
+    } else {
+        message = "you are out of the game!😭"
+        isAlive = false
+    }
+    messageEL.textContent = message
+}
+function newCard() {
+    if (isAlive === true && hasBlackJack === false) {
+        let card = getRandomCard()
+        sum += card
+        cards.push(card)
+        renderGame()
+    }
+
+}
+
+
+
+let hasCompletedCourse = false
+let givesCertificate = true
+// if (hasCompletedCourse === true){
+//     if (givesCertificate === true){
+//         generateCertificate()
+//     }
+// }
+// if (hasCompletedCourse === true && givesCertificate === true){
+//     generateCertificate()
+// }
+if (hasCompletedCourse === true || givesCertificate === false) {
+    generateCertificate()
+}
+function generateCertificate() {
+    // console.log("Generating certificate...")
+}
+
+
+
+
+//logical operator
+let hasSolvedChallenge = false
+let hasHintsLeft = false
+if (hasSolvedChallenge === false && hasHintsLeft === false) {
+    showSolution()
+}
+function showSolution() {
+    // console.log("Showing the solution...")
+}
+
+
+
+let likeDocumentaries = true
+let likesStartups = false
+if (likeDocumentaries === true || likesStartups === true) {
+    recommendMovie()
+}
+function recommendMovie() {
+    // console.log("Hey, check out this new film we think you will like!")
+}
+
+
+
+
+//intro to objects
+let course = {
+    title:"Learn CSS Grid or free",
+    lessons: 16,
+    creator:"Per Harald Borgen",
+    length: 63,
+    level: 2,
+    isFree: true,
+    tags: ["html","css"]
+}
+// console.log(course.tags)
+
+
+
+//create your object
+let castle = {
+    title : "Live like a king in my castle",
+    price: 190,
+    isSuperHost: true,
+    images: ["img/castle1.png", "img/castle2.png"]
+}
+// console.log(castle.price)
+// console.log(castle.isSuperHost)
+
+
+
+
+
+
+//objects and functions
+
+let person = {
+    name: "per",
+    age: 35,
+    country: "Norway",
+}
+function logData(){
+    // console.log(person.name  +  " is " +  person.age  + " years old and lives in " + person.country )
+}
+logData()
+
+
+
+
+
+//conditional operators
+
+let age = 80
+
+if (age < 6){
+    console.log("free")
+} else if (age < 18){
+    console.log("child discount")
+} else if (age < 27){
+    console.log ("student discount")
+} else if (age < 66){
+    console.log ("full price")
+} else {
+    console.log ("senior citizen discount")
+}
+
+
+
+
+//loops and arrays
+// let largeCountries = ["China", "India", "USA", "Indonesia", "Pakistan"]
+// console.log("The 5 largest countries of the world")
+// for (let i = 0; i < largeCountries.length; i++){
+//     console.log("-" + largeCountries[i])
+// }
+
+
+//push ,pop,unshift , shift challenge
+let largeCountries = ["Tuvalu", "India", "USA", "Indonesia", "Monaco"] 
+largeCountries.pop()
+largeCountries.push("pakistan")
+largeCountries.shift()
+// console.log(largeCountries)
+
+
+//logical operators
+let dayOfMonth = 13
+let weekDay = "Friday"
+if ( dayOfMonth === 13 && weekDay === "Friday"){
+    // console.log("😱")
+}
+
+
+
+//rock papers scissors
+let hands = ["rock", "paper", "scissor"]
+function getHand(){
+    let randomIndex = Math.floor(Math.random() * 3)
+    return hands[randomIndex]
+}
+// console.log( getHand() )
+
+
+
+
+//sorting fruits
+let fruit = ["🍎", "🍊", "🍎", "🍎", "🍊"]
+// let appleShelf = document.getElementById("apple-shelf")
+// let orangeShelf = document.getElementById("orange-shelf")
+function sortFruit(){
+    for (let i = 0; i < fruit.length; i++){
+        if (fruit[i] === "🍎") {
+            appleShelf.textContent += "🍎"
+        } else if (fruit[i] === "🍊") {
+            orangeShelf.textContent += "🍊"
+        }
+    }
+}
+// sortFruit()
+
+
+
+function saveLead(){
+    console.log("Button clicked from the onclick attribute")
+}
+
+let inputBtn = document.getElementById("input-btn")
+inputBtn.addEventListener("click",function(){
+    console.log("Button clicked from addEventListener")
+
+})
+
+
+
+
+
+
