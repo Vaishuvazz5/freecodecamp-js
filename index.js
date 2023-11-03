@@ -253,7 +253,7 @@ let fullName = firstName + " " + lastName
 
 
 
-let name = "Linda"
+// let name = "Linda"
 let greeting = "Hi there"
 // Create a function that logs out "Hi there, Linda!" when called
 // function greetLinda(){
@@ -552,17 +552,17 @@ for (let i = 0; i < 5; i += 1) {
 //create a for loop that logs out all the cards in the array
 //use cards.length to specify how long the loop should run
 // for ( let i = 0; i < cards.length; i++){
-//     // console.log(cards[i])
+// //     // console.log(cards[i])
 // }
 
 
 
-// let sentence = ["Hello", "my", "name", "is", "per"]
+let sentence = ["Hello", "my", "name", "is", "per"]
 // let greetingEL = document.getElementById("greeting-el")
 // //Render the sentence in the greetingEL paragraph using a for loop and .textContent
-// for (let i =0; i < sentence.length; i++){
+for (let i =0; i < sentence.length; i++){
 //     greetingEL.textContent += sentence[i] + ""
-// }
+}
 
 
 
@@ -680,11 +680,11 @@ let message = ""
 // let cardsEL = document.getElementById("cards-el")
 
 let player = {
-     name: "Per",
-     chips: 200,
-     sayHello: function(){
+    name: "Per",
+    chips: 200,
+    sayHello: function () {
         // console.log("Heisann!")
-     }
+    }
 }
 player.sayHello()
 
@@ -785,13 +785,13 @@ function recommendMovie() {
 
 //intro to objects
 let course = {
-    title:"Learn CSS Grid or free",
+    title: "Learn CSS Grid or free",
     lessons: 16,
-    creator:"Per Harald Borgen",
+    creator: "Per Harald Borgen",
     length: 63,
     level: 2,
     isFree: true,
-    tags: ["html","css"]
+    tags: ["html", "css"]
 }
 // console.log(course.tags)
 
@@ -799,7 +799,7 @@ let course = {
 
 //create your object
 let castle = {
-    title : "Live like a king in my castle",
+    title: "Live like a king in my castle",
     price: 190,
     isSuperHost: true,
     images: ["img/castle1.png", "img/castle2.png"]
@@ -819,7 +819,7 @@ let person = {
     age: 35,
     country: "Norway",
 }
-function logData(){
+function logData() {
     // console.log(person.name  +  " is " +  person.age  + " years old and lives in " + person.country )
 }
 logData()
@@ -832,16 +832,16 @@ logData()
 
 let age = 80
 
-if (age < 6){
+if (age < 6) {
     console.log("free")
-} else if (age < 18){
+} else if (age < 18) {
     console.log("child discount")
-} else if (age < 27){
-    console.log ("student discount")
-} else if (age < 66){
-    console.log ("full price")
+} else if (age < 27) {
+    console.log("student discount")
+} else if (age < 66) {
+    console.log("full price")
 } else {
-    console.log ("senior citizen discount")
+    console.log("senior citizen discount")
 }
 
 
@@ -851,12 +851,12 @@ if (age < 6){
 // let largeCountries = ["China", "India", "USA", "Indonesia", "Pakistan"]
 // console.log("The 5 largest countries of the world")
 // for (let i = 0; i < largeCountries.length; i++){
-//     console.log("-" + largeCountries[i])
+// //     console.log("-" + largeCountries[i])
 // }
 
 
 //push ,pop,unshift , shift challenge
-let largeCountries = ["Tuvalu", "India", "USA", "Indonesia", "Monaco"] 
+let largeCountries = ["Tuvalu", "India", "USA", "Indonesia", "Monaco"]
 largeCountries.pop()
 largeCountries.push("pakistan")
 largeCountries.shift()
@@ -866,7 +866,7 @@ largeCountries.shift()
 //logical operators
 let dayOfMonth = 13
 let weekDay = "Friday"
-if ( dayOfMonth === 13 && weekDay === "Friday"){
+if (dayOfMonth === 13 && weekDay === "Friday") {
     // console.log("😱")
 }
 
@@ -874,7 +874,7 @@ if ( dayOfMonth === 13 && weekDay === "Friday"){
 
 //rock papers scissors
 let hands = ["rock", "paper", "scissor"]
-function getHand(){
+function getHand() {
     let randomIndex = Math.floor(Math.random() * 3)
     return hands[randomIndex]
 }
@@ -885,10 +885,10 @@ function getHand(){
 
 //sorting fruits
 let fruit = ["🍎", "🍊", "🍎", "🍎", "🍊"]
-// let appleShelf = document.getElementById("apple-shelf")
+// const appleShelf = document.getElementById("apple-shelf")
 // let orangeShelf = document.getElementById("orange-shelf")
-function sortFruit(){
-    for (let i = 0; i < fruit.length; i++){
+function sortFruit() {
+    for (let i = 0; i < fruit.length; i++) {
         if (fruit[i] === "🍎") {
             appleShelf.textContent += "🍎"
         } else if (fruit[i] === "🍊") {
@@ -900,18 +900,254 @@ function sortFruit(){
 
 
 
-function saveLead(){
-    console.log("Button clicked from the onclick attribute")
+//button and input tag
+let myLeads = []
+let oldLeads = []
+
+// myLeads = JSON. stringify(myLeads)
+// myLeads = JSON.parse(myLeads)
+// myLeads.push("www.epiclead.com")
+// console.log(myLeads)
+
+//turn myleads into array
+// myLeads = JSON.parse(myLeads)
+// //push a new value into array
+// myLeads.push("www.lead2.com")
+// //turn array into string again 
+// myLeads = JSON.stringify(myLeads)
+// //console.log the string using typeof to verify its string
+// // console.log(typeof myLeads)
+const inputEL = document.getElementById("input-el")
+const inputBtn = document.getElementById("input-btn")
+// // //unordered list
+const ulEL = document.getElementById("ul-el")
+
+// // localStorage.clear()
+const deleteBtn = document.getElementById("delete-btn")
+const leadsFromLocalStorage = JSON.parse(localStorage.getItem("myLeads"))
+const tabBtn = document.getElementById("tab-btn")
+// // console.log(leadsFromLocalStorage)
+if (leadsFromLocalStorage) {
+    myLeads = leadsFromLocalStorage
+    render(myLeads)
 }
 
-let inputBtn = document.getElementById("input-btn")
-inputBtn.addEventListener("click",function(){
-    console.log("Button clicked from addEventListener")
+const tabs = [
+    {url:"https://www.linkledin.com/in/per-harald-borgen/"}
+]
 
+tabBtn.addEventListener("click", function(){
+    // chrome.tabs.query({active: true, currentWindow: true}, function (tabs){
+    //     console.log(tabs)
+    //     let activeTab = tabs[0];
+    //     let activeTabId = activeTab.id
+    // })
+    chrome.tabs.query({active: true, currentWindow: true}, function(tabs){
+        myLeads.push(tabs[0].url)
+        localStorage.setItem("myLeads",JSON.stringify(myLeads))
+        render(myLeads)
+    })
+    //  console.log(tabs[0].url)
+   
 })
 
+deleteBtn.addEventListener("dblclick", function(){
+    // console.log("double clicked!")
+    localStorage.clear()
+    myLeads = []
+    render(myLeads)
+})
+
+// localStorage.setItem("myName", "Per Harald Borgen")
+// let name = localStorage.getItem("myName")
+// console.log(name)
+// console.log(localStorage.getItem("myLeads"))
+// console.log(ulEL)
+inputBtn.addEventListener("click", function () {
+    myLeads.push("inputEL.value")
+    inputEL.value = " "
+    localStorage.setItem("myLeads", JSON.stringify(myLeads))
+//     // console.log(myLeads)
+    render(myLeads)
+//     // console.log(localStorage.getItem("myLeads"))
+})
+
+//list items  //render functions
+function render(leads) {
+    let listItems = ""
+    for (let i = 0; i < leads.length; i++) {
+        // console.log(myLeads[i])
+        // ulEL.innerHTML += "<li>" + myLeads[i] +  "</li> "
+        // const li = document.createElement("li") 
+        // li.textContent = myLeads[i]  
+        // ulEL.append(li)
+        listItems += 
+        <li>
+            <a  target ='_blank' href = '${myLeads[i]}'>  ${myLeads[i]} 
+            </a>
+        </li>
+        
+        
+        // template strings
+        // listItems += 
+        //     <li>
+        //        <a target='_blank' href="${myLeads[i]}">
+        //            ${myLeads[i]} 
+        //        </a>
+        //     </li > 
+            
+        // console.log(listItems)
+    }
+    ulEL.textContent = listItems
+
+}
+
+
+function saveLead() {
+    // console.log("Button clicked")
+}
+
+// let inputBtn = document.getElementById("input-btn")
+// inputBtn.addEventListener("click", function(){
+//     // console.log("Button clicked from addEventListener")
+// })
+// // let inputBtn = document.getElementById ("input-btn")
+// inputBtn.addEventListener("click", function(){
+//     // console.log("Button clicked!")
+// })
+
+
+//first addEvenetListener
+// let box = document.getElementById("box")
+// box.addEventListener("click", function(){
+//     // console.log("I want to open the box!")
+// })
+
+
+
+// using let and const
+const basePrice = 520
+const discount = 120
+let shippingCost = 12
+let shippingTime = "5-12 days"
+shippingCost = 15
+shippingTime = "7-14 days"
+const fullPrice = basePrice - discount + shippingCost
+// console.log("Total cost:" + fullPrice + ".It will arrive in " + shippingTime)
 
 
 
 
+//innerHTML
+// const container = document.getElementById("container")
+// container.innerHTML = "<button onclick = 'buy()'>Buy!</button>"
 
+function buy() {
+    container.innerHTML += "<p> Thank you for buying! </p>"
+}
+
+
+
+//template string literals
+const recipient = "James"
+const sender = "Per Harald Borgen"
+const email = 'Hey ${recipient}! How is it going? Cheers  ${sender}'
+// console.log(email)
+
+
+//truthy and falsy statements
+const credits = 0
+if (credits){
+    // console.log("let's play  🎾")
+} else {
+    // console.log("sorry you have no credits!😭")
+}
+
+
+
+//truthy and falsy values
+//null -how you as a developer signalize emptines
+//undefined -how javascript signalize emtines
+let currentViewers = null
+currentViewers = ["jane", "nick"]
+currentViewers = []
+if (currentViewers) {
+    // console.log("we have viewers")
+}
+
+// let currentViewers = ["jane"]
+// console.log(currentViewers [5])
+
+
+
+//guess the expression truthy or falsy
+let trueOfFalse = Boolean("")
+// console.log(trueOfFalse)
+
+
+console.log( Boolean("") ) //false
+console.log( Boolean("0") ) //true
+console.log( Boolean(100) )  //true
+console.log(Boolean(null) )  //false
+console.log(Boolean([0]) )   //true
+console.log(Boolean(-0) )   //false
+
+
+
+//function parameter
+// const welcomeEL = document.getElementById ("welcome-el")
+// function greetUser(greeting, name){
+//     welcomeEL.textContent = ' ${greeting}  ${name}  ${emoji} '
+// }
+// greetUser("Howdy", "James", "👋")
+
+
+
+// number as function parameters
+function add(num1, num2){
+    return num1 + num2
+}
+console.log( add(3,4) )  //7
+console.log( add(9,102) ) //111
+
+
+
+//argument vs parameters
+
+//parameters
+// function greetUser(greeting, name){
+//     welcomeEL.textContent = '${greeting}, ${name} 👋'
+// }
+//arguments
+// let hi = "Howdy"
+// greetUser(hi, "James")
+
+// function add(num1, num2){
+//     return num1 + num2
+// }
+// add(3,4)
+
+
+//array vs parameters
+function getFirst(arr){
+    return arr[0]
+}
+let firstCard = getFirst([10,2,5])
+// console.log(firstCard)
+
+
+
+
+// manifest.json
+// {
+//     "manifest-version": 3,
+//     "version": "1.0",
+//     "name": "Leads Tracker",
+//     "action": {
+//         "default-popup": "index.html",
+//         "default-icon": "icon.png",
+//     },
+//     "permissions": [
+//         "tabs"
+//     ]
+// }
